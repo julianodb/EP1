@@ -87,7 +87,7 @@ real MSD_highNamePropriedadeVolume(char *name)
     int sn ;                       // identificador do sólido
 
     if ((sn = MSD_getSolidIdFromName(name)) == -1) {
-        fprintf(stderr, "volume: nao encontrou o sólido %s!\n", name) ;
+        fprintf(stderr, "area: nao encontrou o sólido %s!\n", name) ;
         return(ERROR) ;
     }
     return(MSD_highVolume(sn)) ;
@@ -127,36 +127,17 @@ double MSD_lowPropriedadeArea(SPTYPE s)
     return(area);
 }
 
-double MSD_lowPropriedadeVolume(SPTYPE s)
+double MSD_lowPropriedadeArea(SPTYPE s)
 {
     DPTYPE d;
     FPTYPE f;
-    double volume = 0;
-
-//TODO
-    // p = ponto médio do sólido 
+    double area = 0;
 
     for (d = SolSShells(s) ; d != DNIL ; d = SheNextD(d))
         for (f = SheSFaces(d) ; f != FNIL ; f = FacNextF(f))
-//TODO
-            //volume += MSD_lowPropriedadeVolumePiramide(f,p);
+            area += MSD_lowPropriedadeAreaFace(f);
     return(area);
 }
-
-//TODO
-/*
-double MSD_lowPropriedadeVolumePiramide(FPTYPE f, SEILAH p)
-{
-    LPTYPE l;
-    double area = 0;
-
-    area = MSD_lowPropriedadeAreaLaco(FacFLOut(f));
-    for (l = FacFLoops(f) ; l != LNIL ; l = LooNextL(l))
-        if (l != FacFLOut(f))
-            area -= MSD_lowPropriedadeAreaLaco(l);
-    return(area);
-}
-*/
 
 double MSD_lowPropriedadeAreaFace(FPTYPE f)
 {
