@@ -47,7 +47,7 @@ void MSD_execManipulatePropriedade(void)
 
             // - Comando que calcula o espelho em relação a um plano
             case 'e':
-                if (5 == sscanf(restbuf, "%s %a %b %c %d", onam, a, b, c, d)) {
+                if (5 == sscanf(restbuf, "%s %f %f %f %f", onam, &a, &b, &c, &d)) {
                     //MSD_highNamePropriedadeEspelha(onam, a, b, c, d) ;
                     ip = 1 ;
                 }
@@ -65,7 +65,7 @@ void MSD_execManipulatePropriedade(void)
         }
         if (ip == 0) {
             printf("-avet nome do solido\n") ;
-            if (!lineins("? "))
+            if (!lineins((char*)"? "))
                 return ;
         }
     }
