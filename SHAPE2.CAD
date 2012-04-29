@@ -1,0 +1,8 @@
+# Cone e cilindro com tres lados
+camera -g cam1 100 30 40 0 0 10 5 1 3 1 0  # definicao da camera
+cone a 3 10 20                             # cone de tres lados
+cylinder b 3 4 20                          # cilindro de tres lados
+rotate b 0 0 10 1 0 0 90                   # rotacao do cilindro de tres lados
+clear -a                                   # apaga a area da tela
+disp cam1 *                                # exibe
+

@@ -1,0 +1,19 @@
+## turner 1
+clear -a
+camera -g cam1  100 80 60 0 0 0 3 3 1 1 1
+##
+## criacao do cilindro1
+##
+cyl c1 8 5 30
+move c1 0  0 -15
+copy c1 c2
+copy c1 c3
+rotate c2 0 0 0 1 0 0 90
+rotate c3 0 0 0 0 1 0 90
+union c1 c2 x1
+union x1 c3 x2
+
+clear -a
+disp cam1 *
+end
+

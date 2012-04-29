@@ -1,0 +1,16 @@
+## linhas de interseccao
+##
+camera -g camh 100 50 40 0 0 10 5 1 2 0 0
+camera -g cami 100 50 40 0 0 10 5 1 3 0 0
+
+cone a 16 10 20
+cylinder b 16 5 20
+rotate b 0 0 10 1 0 0 90
+move b 0 0 -3
+
+clear -a
+disp camh *
+wait 10
+clear -a
+disp cami *
+

@@ -1,0 +1,130 @@
+camera -g cam1 100 100 100 0 0 0 1 3 1 1 1
+revolve corpo 16 5 1
+0 0
+63 0
+63 11
+25 17
+0 17
+prism p1 5 5
+0 9
+0 50
+-50 0
+-9 0
+-9 9
+cylinder c1 16 9 5
+move c1 -9 9 0
+union c1 p1 sol1
+move sol1 -17.3 17.3 13
+minus corpo sol1 corpo2
+cylinder c2 16 6 20
+move c2 -28.3 28.3 0
+minus corpo2 c2 corpo3
+cylinder c3 16 8 5
+move c3 -33.5 -20.5 13
+minus corpo3 c3 corpo4
+cylinder c4 16 3 20
+move c4 -33.5 -20.5 0
+minus corpo4 c4 corpo5
+cylinder c5 16 12 21
+move c5 -16.5 -31 0
+union corpo5 c5 corpo6
+cylinder c6 16 5 20
+move c6 -22 2 9
+minus corpo6 c6 corpo7
+prism p2 4 15
+0 6
+10 6
+10 -6
+0 -6
+cylinder c7 16 6 15
+union p2 c7 sol2
+rotate sol2 0 0 0 0 0 1 45
+move sol2 38.9 38.9 0
+union corpo7 sol2 corpo8
+cylinder c8 16 3 20
+move c8 38.9 38.9 0
+minus corpo8 c8 corpo9
+prism p3 4 17
+0 25
+25 25
+25 -25
+0 -25
+union corpo9 p3 corpo10
+prism p4 8 50
+-4 -25
+-17.1 -25
+-17.1 -16
+-26 -16
+-26 16
+-17.1 16
+-17.1 25
+-4 25
+cylinder c8 16 9 50
+move c8 -17 -16 0
+cylinder c9 16 9 50
+move c9 -17 16 0
+union p4 c8 sol3
+union sol3 c9 sol4
+prism p5 3 50
+0 30
+9 0
+0 0
+rotate p5 0 0 0 1 0 0 90
+move p5 -26 25 0
+minus sol4 p5 sol5
+rotate sol5 0 0 0 0 1 0 90
+move sol5 25 0 0
+union sol5 corpo10 corpo11
+cylinder c10 16 72.5 30
+intersect c10 corpo11 corpo12
+prism p6 8 50
+-2 -27
+-19 -27
+-19 -18
+-28 -18
+-28 18
+-19 18
+-19 27
+-2 27
+cylinder c11 16 9 50
+move c11 -19 -18 0
+cylinder c12 16 9 50
+move c12 -19 18 0
+union p6 c11 sol7
+union sol7 c12 sol8
+rotate sol8 0 0 0 0 1 0 90
+move sol8 25 0 0
+cylinder c13 16 72.5 26
+cylinder c14 16 75 26
+minus c14 c13 coroa
+move coroa 0 0 2
+intersect coroa sol8 sol9
+union sol9 corpo12 corpo13
+prism p7 8 50
+-4.5 -24.5
+-16.5 -24.5
+-16.5 -15.5
+-25.5 -15.5
+-25.5 15.5
+-16.5 15.5
+-16.5 24.5
+-4.5 24.5
+cylinder c15 16 9 50
+move c15 -16.5 -15.5 0
+cylinder c16 16 9 50
+move c16 -16.5 15.5 0
+union p7 c15 sol10
+union sol10 c16 sol11
+rotate sol11 0 0 0 0 1 0 90
+move sol11 55 0 0
+minus corpo13 sol11 corpo14
+cylinder c17 8 9 20
+move c17 36 18.6 0
+union corpo14 c17 corpo15
+camera -g cam2 100 100 100 0 0 0 1 1 2 0 1
+clear -a
+display cam2 **
+wait 5
+clear -a
+display cam1 **
+

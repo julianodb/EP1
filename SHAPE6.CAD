@@ -1,0 +1,41 @@
+# Exemplo de revolucao
+#
+# copo de coquetel
+camera -g cam1 90 60 40 0 0 10 3 1 0 0 1   # definicao da camera
+camera -g cam3 90 60 40 0 0 10 3 1 1 0 1   # definicao da camera
+revolve a 16 6                        # copo de coquetel - poligono de corte
+  0   0
+  5   0
+  0.5 0.5
+  0.5 9.5
+ 10  20
+  0  10
+clear -a
+disp cam1 a
+wait 10
+clear -a
+disp cam3 a
+wait 10
+#
+# estadio em circulo
+camera -g cam2 30 40 90 0 0 0 2 1 0 0 1    # definicao da camera
+camera -g cam4 30 40 90 0 0 0 2 1 1 0 1    # definicao da camera
+revolve b 15 12                            # estadio - poligono de corte
+ 20  0
+ 20 10
+ 18 10
+ 18  8
+ 16  8
+ 16  6
+ 14  6
+ 14  4
+ 12  4
+ 12  2
+ 10  2
+ 10  0
+clear -a
+disp cam2 b
+wait 10
+clear -a
+disp cam4 b
+

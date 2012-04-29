@@ -1,0 +1,18 @@
+## criacao do anel - comando dispfile -w ringsn.dsp
+##
+camera -g cam0	100 50 40 0 0 0 4 1 0 0 0
+camera -g camh3 100 50 40 0 0 0 4 1 2 0 1
+camera -g cami3 100 50 40 0 0 0 4 1 3 0 1
+##
+torus r1 10 15 5
+copy r1 r2
+rotate r2 0 0 0 1 0 0 90
+dispfile -w rings1.dsp
+disp cami3 r1 r2
+##
+rotate r2 0 0 0 0 0 1 90
+move r1 0 -7.5 0
+move r2 0 7.5 0
+cl -a
+dispfile -w rings2.dsp
+disp camh3 r1 r2

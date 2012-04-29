@@ -1,0 +1,19 @@
+## exemplos de camera
+					  # exibe todas as linhas
+camera -g cam0	100 50 40 0 0 0 4 1 0 0 0
+					  # processamento local
+camera -g caml1 100 50 40 0 0 0 4 1 1 1 1  # linhas hash., exibe planos
+camera -g caml2 100 50 40 0 0 0 4 1 1 1 0  # linhas hash., nao exibe planos
+camera -g caml3 100 50 40 0 0 0 4 1 1 0 1  # nao linhas hash., exibe planos
+camera -g caml4 100 50 40 0 0 0 4 1 1 0 0  # nao linhas hash., nao exibe planos
+#					  # processamento global
+camera -g camh1 100 50 40 0 0 0 4 1 2 1 1  # linhas hash., exibe planos
+camera -g camh2 100 50 40 0 0 0 4 1 2 1 0  # linhas hash., nao exibe planos
+camera -g camh3 100 50 40 0 0 0 4 1 2 0 1  # nao linhas hash., exibe planos
+camera -g camh4 100 50 40 0 0 0 4 1 2 0 0  # nao linhas hash., nao exibe planos
+#					  # processamento completo
+camera -g cami1 100 50 40 0 0 0 4 1 3 1 1  # linhas hash., exibe planos
+camera -g cami2 100 50 40 0 0 0 4 1 3 1 0  # linhas hash., nao exibe planos
+camera -g cami3 100 50 40 0 0 0 4 1 3 0 1  # nao linhas hash., exibe planos
+camera -g cami4 100 50 40 0 0 0 4 1 3 0 0  # nao linhas hash., nao exibe planos
+

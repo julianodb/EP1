@@ -1,0 +1,85 @@
+# Exemplo para teste das operacoes curvas e operadores de Euler
+
+# Definicao de cameras e objetos
+del cubo1
+clear -a
+cam -g c1 60 60 60 10 10 25 6 2 1 1 1  #Camera para zoom
+cam -g c2 55 55 55  0  0  0 2 2 1 1 1  #Camera de trabalho
+monitor c2 on
+cube cubo1 10 20 30
+wait 1
+
+# Exemplo de manipulacao de halfedges
+# Para entender melhor o funcionamento aconselha-se executar comando a comando
+# show -o cubo1 : utilize este comando quando executar linha a linha
+
+# Utilize o comando memo_show -1 para ver a lista de halfedges
+# Primeiro passo do arredondamento
+
+gethe cubo1 7 6 4 0
+cnewloc 0  8 20 30
+clear -a
+display c2 cubo1
+#wait 1
+
+getprev 0 1
+getmate 1 2
+cmev 2 0 10 20 28
+clear -a
+display c2 cubo1
+#wait 1
+
+# Segundo passo do arredondamento
+getmate 0 3
+cnewloc 3  8  0 30
+clear -a
+display c2 cubo1
+#wait 1
+
+getprev 3 4
+getmate 4 5
+getnext 0 6
+cmev 6 5 10  0 28
+clear -a
+display c2 cubo1
+wait 0
+
+# Terceiro passo do arredondamento
+getnext 1 7
+cmef 6 7
+clear -a
+display c2 cubo1
+wait 0
+
+clear -a
+display c1 cubo1
+wait 1
+
+# Quarto passo do arredondamento
+getmate 7 8
+newpoly 1 cubo1   10.0   20.0   28.0
+addpoint 1 cubo1      10.0   20.0   29.1
+addpoint 1 cubo1       9.1   20.0   30.0
+addpoint 1 cubo1       8.0   20.0   30.0
+cputctag cubo1 1 8
+cevalpolyline 8 4
+
+clear -a
+display c1 cubo1
+wait 1
+
+# Quinto passo do arredondamento
+getnext 0 9
+getmate 9 9
+newpoly 2 cubo1    8.0    0.0   30.0
+addpoint 2 cubo1       8.5    0.0   29.5
+addpoint 2 cubo1       9.5    0.0   29.5
+addpoint 2 cubo1      10.0    0.0   28.0
+cputctag cubo1 2 9
+cevalpolyline 9 4
+
+
+clear -a
+display c1 cubo1
+
+

@@ -1,0 +1,266 @@
+camera -g cam 20000 10000 9000 0 0 900 10 3 0 0 0
+
+rprisma  cilin_d 1180  440 440
+rdesloca cilin_d -795 -940 180
+
+rprisma  cilin_e 1180  440 440
+rdesloca cilin_e -795 530 180
+
+rprisma  bomba2 650  498 414
+rdesloca bomba2 -820 -249 595
+
+rprisma  equip_d 470  145 145
+rdesloca equip_d -1385 -410 180
+
+rprisma  equip_e 470  145 145
+rdesloca equip_e -1385 235 180
+
+rcir motor1 62 228 20
+rrot motor1 90 0 0
+rdes motor1 -130.5 -607 910
+color -o motor1 9
+
+rcir duto1 206 165 20
+rrot duto1 90 0 0
+rdes duto1 -130.5 -835 910
+color -o duto1 9
+
+rcir motor2 62 228 20
+rrot motor2 -90 0 0
+rdes motor2 -130.5 566 910
+color -o motor2 9
+
+rcir duto2 206 165 20
+rrot duto2 -90 0 0
+rdes duto2 -130.5 794 910
+color -o duto2 9
+
+rcir motor3 62 228 20
+rrot motor3 0 -90 0
+rdes motor3 -982 -731 910
+color -o motor3 9
+
+rcir duto3 206 165 20
+rrot duto3 0 -90 0
+rdes duto3 -1210 -731 910
+color -o duto3 9
+
+rcir motor4 62 228 20
+rrot motor4 0 -90 0
+rdes motor4 -982 731 910
+color -o motor4 9
+
+rcir duto4 206 165 20
+rrot duto4 0 -90 0
+rdes duto4 -1210 731 910
+color -o duto4 9
+
+rqua brhrz1 125 1075
+rrot brhrz1  90 0 0
+rdes brhrz1 631 793.5 290
+color -o brhrz1 8
+
+rqua brhrz2 225 455
+rdes brhrz2 631 568.5 290
+color -o brhrz2 8
+
+rqua brvert 200 890
+rdes brvert 679.5 -751.7 290
+color -o brvert 7
+
+rqua bl11 41 2400
+rrota bl11  0 90 0
+rdesloca bl11 -1479.5 -1000 173
+color -o bl11 6
+
+rqua bl12 41 2400
+rrota bl12  0 90 0
+rdesloca bl12 -1479.5 -1000 41
+color -o bl12 6
+
+rqua bl21 41 1695
+rrota bl21  0 90 0
+rdesloca bl21 -1479.5 -475.8 173
+color -o bl21 6
+
+rqua bl22 41 1695
+rrota bl22  0 90 0
+rdesloca bl22 -1479.5 -475.8 41
+color -o bl22 6
+
+rqua bl31 41 1695
+rrota bl31  0 90 0
+rdesloca bl31 -1479.5 455.2 173
+color -o bl31 6
+
+rqua bl32 41 1695
+rrota bl32  0 90 0
+rdesloca bl32 -1479.5 455.2 41
+color -o bl32 6
+
+rqua bl41 41 2400
+rrota bl41  0 90 0
+rdesloca bl41 -1479.5 959 173
+color -o bl41 6
+
+rqua bl42 41 2400
+rrota bl42  0 90 0
+rdesloca bl42 -1479.5 959 41
+color -o bl42 6
+
+rprisma  bomba 1180  498 414
+rdesloca bomba -820 -249 180
+
+rqua bv11 41 1088
+rrota bv11 0 15.2690 0
+rdesloca bv11 879.5 -1000 173
+color -o bv11 2
+
+rqua bv21 41 1088
+rrota bv21 0 15.2690 0
+rdesloca bv21 879.5 0 173
+color -o bv21 2
+
+rqua bv31 41 1088
+rrota bv31 0 15.2690 0
+rdesloca bv31 879.5 959 173
+color -o bv31 2
+
+rqua bv12 41 1044
+rdesloca bv12 428.5 -1000 173
+color -o bv12 2
+
+rqua bv22 41 1218
+rrota bv22 0 28.4429 0
+rdesloca bv22 -150.8 -475.8 173
+color -o bv22 2
+
+rqua bv32 41 1218
+rrota bv32 0 28.4429 0
+rdesloca bv32 -150.8 455.2 173
+color -o bv32 2
+
+rqua bv42 41 1044
+rdesloca bv42 428.5 959 173
+color -o bv42 2
+
+rqua bv13 41 1044
+rdes bv13 -821.5 -1000 173
+color -o bv13 2
+
+rqua bv23 41 1218
+rrota bv23 0 -28.4429 0
+rdesloca bv23 -242.2 -475.8 173
+color -o bv23 2
+
+rqua bv33 41 1218
+rrota bv33 0 -28.4429 0
+rdesloca bv33 -242.2 455.2 173
+color -o bv33 2
+
+rqua bv43 41 1044
+rdesloca bv43 -821.5 959 173
+color -o bv43 2
+
+rqua bv14 41 1044
+rdesloca bv14 -1479.5 -1000 173
+color -o bv14 2
+
+rqua bv24 41 1044
+rdesloca bv24 -1479.5 0 173
+color -o bv24 2
+
+rqua bv34 41 1044
+rdesloca bv34 -1479.5 959 173
+color -o bv34 2
+
+rprism flut 3000 2000 546
+rdesloca flut -1500 -1000 1254
+color -o flut 3
+
+rqua bh11 41 2000
+rdesloca bh11 0 0 -1000
+rrota   bh11 90 0 0
+rdesloca bh11 1148.5 0 1213
+color -o bh11 4
+
+rqua bh21 41 2000
+rdesloca bh21 0 0 -1000
+rrota   bh21 90 0 0
+rdesloca bh21  879.5 0  152.4
+color -o bh21 4
+
+rqua bh31 41 2000
+rdesloca bh31 0 0 -1000
+rrota   bh31 90 0 0
+rdesloca bh31  879.5 0   20.5
+color -o bh31 4
+
+rqua bh12 41 2000
+rdesloca bh12 0 0 -1000
+rrota   bh12 90 0 0
+rdesloca bh12  428.5 0 1213
+color -o bh12 4
+
+rqua bh22 41 2000
+rdesloca bh22 0 0 -1000
+rrota   bh22 90 0 0
+rdesloca bh22  428.5 0  152.5
+color -o bh22 4
+
+rqua bh32 41 2000
+rdesloca bh32 0 0 -1000
+rrota   bh32 90 0 0
+rdesloca bh32  428.5 0   20.5
+color -o bh32 4
+
+rqua bh13 41 2000
+rdesloca bh13 0 0 -1000
+rrota   bh13 90 0 0
+rdesloca bh13 -821.5 0 1213
+color -o bh13 4
+
+rqua bh23 41 2000
+rdesloca bh23 0 0 -1000
+rrota   bh23 90 0 0
+rdesloca bh23 -821.5 0  152.5
+color -o bh23 4
+
+rqua bh33 41 2000
+rdesloca bh33 0 0 -1000
+rrota   bh33 90 0 0
+rdesloca bh33 -821.5 0   20.5
+color -o bh33 4
+
+rqua bh14 41 2000
+rdesloca bh14 0 0 -1000
+rrota   bh14 90 0 0
+rdesloca bh14 -1479.5 0 1213
+color -o bh14 4
+
+rqua bh24 41 2000
+rdesloca bh24 0 0 -1000
+rrota   bh24 90 0 0
+rdesloca bh24 -1479.5 0  152.5
+color -o bh24 4
+
+rqua bh34 41 2000
+rdesloca bh34 0 0 -1000
+rrota   bh34 90 0 0
+rdesloca bh34 -1479.5 0   20.5
+color -o bh34 4
+
+cl -g
+dis cam **
+end
+rordena dolph__0.hyd 15 -1  0  0
+
+rordena dolph_90.hyd 15  0 -1  0
+
+rordena dolph180.hyd 15  1  0  0
+
+rordena dolph270.hyd 15  0  1  0
+
+rordena dolph_up.hyd 15  0  0 -1
+
+rordena dolphdow.hyd 15  0  0  1

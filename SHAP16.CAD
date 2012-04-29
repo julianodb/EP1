@@ -1,0 +1,30 @@
+## Alteracoes no centro de visao e na abertura
+##
+cube a 5 10 20
+move a 0 0 -10
+## Alteracoes no centro de visao e na abertura
+camera -g cam_b 100 100 100 0 0 0 5 1 2 1 0
+clear -a
+disp cam_b a
+wait 10
+camera -g cam_c 40 40 40 0 0 0 2 1 2 1 0
+clear -a
+disp cam_c a
+wait 10
+camera -g cam_d 20 20 20 0 0 0 1 1 2 1 0
+clear -a
+disp cam_d a
+wait 10
+## Centro de visao fixo e alteracoes na abertura
+camera -g cam_e 30 30 0 0 0 10 1 1 2 1 0
+clear -a
+disp cam_e a
+wait 10
+camera -g cam_f 30 30 0 0 0 0 1 1 2 1 0
+clear -a
+disp cam_f a
+wait 10
+camera -g cam_g 30 30 0 0 0 -10 1 1 2 1 0
+clear -a
+disp cam_g a
+

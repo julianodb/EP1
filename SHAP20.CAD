@@ -1,0 +1,14 @@
+## Linhas de interseccao
+##
+camera -g cam 100 50 40 0 0 0 3 1 3 0 0
+
+cube a 5 30 10
+move a -10 -10 0
+cube b 30 30 5
+move b -15 -15 0
+cube c 5 5 20
+move c 20 10 0
+
+clear -a
+disp cam a b c
+

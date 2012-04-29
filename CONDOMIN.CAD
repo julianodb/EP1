@@ -1,0 +1,104 @@
+## condominio
+##
+## definicao de cameras
+camera -g cam1		200 100 50  0 0 0  4.5  1 1 0 0
+camera -g camwire1	200 100 50  0 0 0  4.5  1 0 0 0
+camera -g cam2		20 200 50  20 0 0  4.5  1 1 0 0
+camera -g camwire2	20 200 50  20 0 0  4.5  1 0 0 0
+##
+################
+##  uma casa  ##
+################
+gr -G casa
+## chao
+prism  chao 10 2
+10 -20
+10 0
+14 0
+14 2
+10 2
+10 12
+14 12
+14 14
+-10 14
+-10 -20
+move chao 0 0 -2
+##
+## escada
+prism escada 8 10
+0 0
+3 0
+3 0.5
+2 0.5
+2 1
+1 1
+1 1.5
+0 1.5
+rotate escada 0 0 0 1 0 0 90
+move escada 10 12 -2
+##
+## quarto
+prism quarto 6 8
+8 -18
+8 2
+2 2
+2 12
+-8 12
+-8 -18
+##
+## coluna
+cube coluna 1 1 8
+move coluna 6.5 10.5 0
+##
+## telhado
+prism telhado 3 34
+10 0
+0 4
+-10 0
+rotate telhado 0 0 0 1 0 0 90
+move telhado 0 14 8
+##
+## chamine
+cube chamine 4 4 6
+move chamine -6 -14 6.2
+##################################
+##      copia das casa          ##
+##################################
+gr -c ..		## retorna ao grupo raiz
+color -g casa 1
+disp cam1 casa
+##
+copy casa casaf
+rotate  casaf  0 0 0 0 0 1 90
+move  casaf 40 0 0
+color -g casaf 2
+disp cam1 casaf
+##
+copy casa casad
+move  casad 0 50 0
+color -g casad 4
+disp cam1 casad
+##
+copy casa casag
+rotate casag 0 0 0 0 0 1 180
+move casag 40 50 0
+color -g casag 5
+disp cam1 casag
+##
+copy casa casae
+rotate casae 0 0 0 0 0 1 90
+move casae 20 -40 0
+color -g casae 6
+disp cam1 casae
+##
+print	Espere 10 segundos.\n
+wait	2
+##
+cl -a
+disp cam1 **
+wait	2
+cl -a
+disp camwire2 **
+wait	2
+cl -a
+disp cam2	**

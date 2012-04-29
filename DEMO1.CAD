@@ -1,0 +1,27 @@
+## demonstrativo 1
+## topologia do cilindro
+##
+clear -a
+camera -g cam 100 50 40 0 0 0 5 1 3 0 1
+cyl c1 20 8 20
+move c1 0 0 -10
+copy c1 c2
+rotate c2 0 0 0 1 0 0 90
+##
+wind 0 0.5 0.5
+disp cam *
+##
+move c2 -1 0 0
+wind 0.5 0.5 0.5
+disp cam *
+##
+move c2 -1 0 0
+wind 0 0 0.5
+disp cam *
+##
+move c2 -1 0 0
+wind 0.5 0 0.5
+disp cam *
+##
+wind 0 0 1
+

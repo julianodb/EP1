@@ -1,0 +1,76 @@
+camera -g cam1 400 400 400 -100 -100 0 3 1 3 0 0
+group -G grupo1
+cylinder hand 10 5 25
+rotate hand 0 0 0 0 1 0 90
+rotate hand 0 0 0 0 0 1 90
+move hand -45 -156 85
+cube garb3 20 5 22
+move garb3 -55 -156 74
+prism garra 8 10
+0 0
+30 0
+30 15
+27 15
+27 3
+3 3
+3 15
+0 15
+rotate garra 0 0 0 0 1 0 90
+rotate garra 0 0 0 0 0 1 180
+move garra -40 -156 100
+axis -r egrupo1 -45 -156 85 0 -1 0
+axis -a egrupo1 grupo1
+group -c \
+group -G grupo2
+group -p grupo2 grupo1
+cylinder gar2 10 7.5 22
+move gar2 -45 -123 74
+cube garb2 20 5 22
+move garb2 -55 -131 74
+axis -r egrupo2 -45 -123 74 0 0 1
+axis -a egrupo2 grupo2
+group -c \
+group -G grupo3
+group -p grupo3 grupo2 grupo1
+cylinder gar 10 5 10
+rotate gar 0 0 0 0 1 0 90
+rotate gar 0 0 0 0 0 1 90
+move gar -45 -110 85
+cube garb 20 10 20
+move garb -55 -120 75
+axis -r egrupo3 -45 -110 85 0 -1 0
+axis -a egrupo3 grupo3
+group -c \
+group -G grupo4
+group -p grupo4 grupo3 grupo2 grupo1
+cube braco2 30 150 20
+move braco2 -60 -100 75
+axis -s egrupo4 0 -1 0
+axis -a egrupo4 grupo4
+group -c \
+group -G grupo5
+group -p grupo5 grupo4 grupo3 grupo2 grupo1
+cylinder body 15 12.5 50
+rotate body 0 0 0 0 1 0 90
+move body -25 0 85
+cube braco 40 40 30
+move braco -65 -20 70
+axis -r egrupo5 0 0 85 -1 0 0
+axis -a egrupo5 grupo5
+group -c \
+group -G grupo6
+group -p grupo6 grupo5 grupo4 grupo3 grupo2 grupo1
+cube corp 50 25 15
+move corp -25 -12.5 70
+axis -r egrupo6 0 0 0 0 0 1
+axis -a egrupo6 grupo6
+group -c \
+group -G grupo7
+group -p grupo7 grupo6 grupo5 grupo4 grupo3 grupo2 grupo1
+cylinder base 15 25 10
+cylinder base2 15 15 50
+move base2 0 0 10
+cylinder base3 15 17.5 10
+move base3 0 0 60
+display cam1 grupo7
+end

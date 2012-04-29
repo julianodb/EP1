@@ -1,0 +1,8 @@
+# Cone e cilindro
+camera -g cam1 100 50 40 0 0 10 5 1 2 0 1  # definicao da camera
+cone a 20 10 20                            # criacao do cone
+cylinder b 20 4 20                         # criacao do cilindro
+rotate b 0 0 0 1 0 0 90                    # rotacao do cilindro
+move b 0 10 10                             # translacao do cilindro
+clear -a                                   # apaga a area grafica
+disp cam1 *                                # exibe os elementos
